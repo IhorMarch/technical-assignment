@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 `;
@@ -26,7 +25,7 @@ export const Header = styled.header`
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
-  font-weight: 800;
+  font-weight:500;
   color: black
 `;
 

@@ -1,12 +1,16 @@
 import {  Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import { Wrapper, Header, List, StyledLink } from './AppBar.styled'
+import { Header, List, StyledLink } from './AppBar.styled'
 import { Loader } from '../Loader/Loader'
+
+
+
 export const AppBar = () => {
 
 return (
-    <Wrapper>
+    
       <Header>
+        <div className="container">
         <List>
           <li>
             <StyledLink to="/" >
@@ -14,21 +18,24 @@ return (
             </StyledLink>
           </li>
           <li>
-            <StyledLink to="/movies" end>
-              Movies
+            <StyledLink to="/catalog" end>
+              Catalog
+            </StyledLink>
+                </li>
+                
+                  <li>
+            <StyledLink to="/favorites" end>
+              Favorites
             </StyledLink>
           </li>
         </List>
-      </Header>
+        </div>
+     
 <Suspense fallback={<Loader />}>
       <Outlet />
  </Suspense>
-    </Wrapper>
+     </Header>
   );
-
-
-
-
 
 
  }
