@@ -3,6 +3,9 @@ import { lazy } from 'react';
 import { AppBar } from './AppBar/AppBar';
 
 
+
+
+
 const Home = lazy(() => import('../pages/Home'));
 const Catalog = lazy(() => import('../pages/Catalog'));
 // const Favorites = lazy(() => import('../pages/Favorites'));

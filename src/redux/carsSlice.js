@@ -10,7 +10,9 @@ const carsInitialState =
   ],
 
     isLoading: false,
-    error: null
+    error: null,
+    page: 1,
+    perPage: 12,
 };
 
 
@@ -22,9 +24,13 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
+  const handleLoadMore = (state, action) => {
+     state.page = state.page+1;
+  };
+
 
 const carsSlice = createSlice({
-    name: "cars",
+    name: "adverts",
     initialState: carsInitialState,
   
 extraReducers: (builder) => {

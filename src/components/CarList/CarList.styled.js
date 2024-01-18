@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 
 export const List = styled.ul`
-   display: grid;
-  max-width: calc(100vw - 48px);
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  grid-gap: 16px;
+  display: grid;
+  max-width: calc(100vw - 116px);
+  grid-template-columns: repeat(auto-fill, minmax(274px, 1fr));
+  grid-gap: 29px;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
@@ -19,11 +19,11 @@ export const List = styled.ul`
 export const Item = styled.li`
 
 
-  padding: 10px;
-  width: 380px;
-  margin-bottom: 5px;
+
+  width: 274px;
+ 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 20px;
+  
 `;

@@ -13,7 +13,7 @@ import {
 
 export const store = configureStore({
   reducer: {
-    cars: reducerCars,
+    adverts: reducerCars,
    
   },
 
