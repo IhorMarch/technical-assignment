@@ -1,6 +1,6 @@
 // import { SearchBar } from '../components/SearchBar/Searchbar'
 import { CarList } from '../components/CarList/CarList';
-import { Loader } from '../components/Loader/Loader';
+// import { Loader } from '../components/Loader/Loader';
 import { useEffect} from 'react';
 import { getCars} from '../redux/selectors';
 import { fetchCars} from '../redux/operations';

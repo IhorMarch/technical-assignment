@@ -19,7 +19,7 @@ import {
 
 export const Car = ({ car }) => {
   
-  const { id, make, model, year, img, rentalPrice, mileage,address,rentalCompany,type,accessories } = car;
+  const { id, make, model, year, img, rentalPrice,address,rentalCompany,type,accessories } = car;
 const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700'
 
   const cutedAddress = address.split(/, |,|,/);

@@ -24,9 +24,9 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
-  const handleLoadMore = (state, action) => {
-     state.page = state.page+1;
-  };
+  // const handleLoadMore = (state, action) => {
+  //    state.page = state.page+1;
+  // };
 
 
 const carsSlice = createSlice({
