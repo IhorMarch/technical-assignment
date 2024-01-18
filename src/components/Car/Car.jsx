@@ -2,16 +2,13 @@
 import {
   ImgWrapper,
   Img,
-  Box,
   TitleBox,
   Title,
-  BottomBox,
   TitleModel,
   Item,
   Button,
   TitlePrice,
   List,
-  Wrapper
 } from '../Car/Car.styled';
 
 
@@ -36,20 +33,18 @@ const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/i
                   />    
                 </ImgWrapper>
 
-      <Box>
-        
         <TitleBox>
-          <Wrapper>
+         
             <List>
           <Title>{make}</Title>
           <TitleModel> {model},</TitleModel>
           <Title>{year}</Title>
             </List>
-          </Wrapper>
+        
             <TitlePrice>{rentalPrice}</TitlePrice>
         </TitleBox>
 
-        <BottomBox>
+      
           <List>
 
             <Item>{cutedAddress[1]}</Item>
@@ -63,8 +58,7 @@ const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/i
             <Item>{accessories[2]}</Item>
           
           </List>
-        </BottomBox>
-      </Box>
+     
 
       <Button>Learn more</Button>
               </div>

@@ -15,19 +15,6 @@ background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23
 `;
 
 
-
-export const Box = styled.div`
-
-
-`;
-
-export const Wrapper = styled.div`
-
-
-`;
-
-
-
 export const List = styled.ul`
 display:flex;
 flex-wrap: wrap;
