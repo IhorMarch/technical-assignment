@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/technical-assignment/static/css/main.7acaea2f.css",
-    "main.js": "/technical-assignment/static/js/main.8b5063d0.js",
+    "main.js": "/technical-assignment/static/js/main.42a903e5.js",
     "static/js/258.b988014d.chunk.js": "/technical-assignment/static/js/258.b988014d.chunk.js",
-    "static/js/717.8d57a38a.chunk.js": "/technical-assignment/static/js/717.8d57a38a.chunk.js",
+    "static/js/717.0d1d91e9.chunk.js": "/technical-assignment/static/js/717.0d1d91e9.chunk.js",
     "static/media/car2@2.jpg": "/technical-assignment/static/media/car2@2.41ce8c49be9ec86efa93.jpg",
     "static/media/car.jpg": "/technical-assignment/static/media/car.577ce392ca4fd851c491.jpg",
     "static/media/Manrope-Medium.ttf": "/technical-assignment/static/media/Manrope-Medium.08894ccb04665d1a9d53.ttf",
     "static/media/Manrope-Regular.ttf": "/technical-assignment/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
     "index.html": "/technical-assignment/index.html",
     "main.7acaea2f.css.map": "/technical-assignment/static/css/main.7acaea2f.css.map",
-    "main.8b5063d0.js.map": "/technical-assignment/static/js/main.8b5063d0.js.map",
+    "main.42a903e5.js.map": "/technical-assignment/static/js/main.42a903e5.js.map",
     "258.b988014d.chunk.js.map": "/technical-assignment/static/js/258.b988014d.chunk.js.map",
-    "717.8d57a38a.chunk.js.map": "/technical-assignment/static/js/717.8d57a38a.chunk.js.map"
+    "717.0d1d91e9.chunk.js.map": "/technical-assignment/static/js/717.0d1d91e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.8b5063d0.js"
+    "static/js/main.42a903e5.js"
   ]
 }
