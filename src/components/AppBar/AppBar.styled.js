@@ -21,16 +21,16 @@ export const StyledLink = styled(NavLink)`
   }
 `;
 export const Header = styled.header`
+  
+`;
+
+export const List = styled.ul`
+  display: flex;
   padding: 0 15px;
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
   font-weight:500;
-  color: black
-`;
-
-export const List = styled.ul`
-  display: flex;
-
+  color: black;
   gap: 20px;
 `;

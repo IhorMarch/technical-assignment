@@ -7,8 +7,8 @@ export const CarList = ({cars}) => {
 
   return (
     <List>
-          {cars.map((car, index) => (   
-    <Item key={`${car.id}-${index}`}> 
+          {cars.map((car) => (   
+    <Item key={`${car.id}`}> 
                   <Car car={car} />
               </Item>    
       ))}

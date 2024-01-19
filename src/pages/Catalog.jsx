@@ -47,16 +47,10 @@ console.log(visiblecars.id);
   return (
   
     <div className="container">
-
-
-  
   <SearchBar/>
-      {/* <CarList cars={cars.slice(0, page * perPage)} /> */}
-      {/* cars.length > 0 && cars.length >= perPage && */}
-      
-      <CarList cars={visiblecars}/>
+  <CarList cars={visiblecars}/>
       {loadMoreDisabled &&  (
-     <Button onClick={handleLoadMore}/>
+  <Button onClick={handleLoadMore}/>
      )}
     </div>
     

@@ -8,9 +8,7 @@ import { Loader } from '../Loader/Loader'
 export const AppBar = () => {
 
 return (
-    
-      <Header>
-        <div className="container">
+     <header>
         <List>
           <li>
             <StyledLink to="/" >
@@ -29,12 +27,13 @@ return (
             </StyledLink>
           </li>
         </List>
-        </div>
+       
      
 <Suspense fallback={<Loader />}>
       <Outlet />
  </Suspense>
-     </Header>
+
+  </header>
   );
 
 
