@@ -61,7 +61,7 @@ extraReducers: (builder) => {
 
 
 const persistConfig = {
-  key: 'root',
+  key: 'cars',
   storage,
 }
 
