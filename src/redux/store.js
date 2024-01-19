@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { reducerCars } from "./carsSlice";
-import { persistStore} from 'redux-persist'
+import { persistStore } from 'redux-persist'
+import { filtersReducer } from "./filterSlice";
 import {
   FLUSH,
   REHYDRATE,
@@ -14,6 +15,7 @@ import {
 export const store = configureStore({
   reducer: {
     adverts: reducerCars,
+    filter: filtersReducer,
    
   },
 

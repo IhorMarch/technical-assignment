@@ -7,17 +7,12 @@ export const CarList = ({cars}) => {
 
   return (
     <List>
-          {cars.map(car => (   
-    <Item key={car.id}> 
+          {cars.map((car, index) => (   
+    <Item key={`${car.id}-${index}`}> 
                   <Car car={car} />
               </Item>    
       ))}
 
     </List>
   );
-
-
-
-
-
 };
