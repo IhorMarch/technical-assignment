@@ -1,9 +1,10 @@
-import {Label,Title,Wrapper,Select,Option} from './SearchBar.styled'
+import {Option,Title,SelectBrands,Wrapper,Svg,Select,InputLeft,InputRight,Button,SelectedOption} from './SearchBar.styled'
 import { useDispatch } from "react-redux";
-import { setStatusFilter } from "../../redux/filterSlice";
-import React, { useState} from 'react';
+import { setMakeFilter  } from "../../redux/filterSlice";
+import React, { useState } from 'react';
+import { fetchFiltredCars} from '../../redux/operations';
 import sprite from '../../images/symbol-defs.svg';
-
+// import Select from 'react-select';
 const makes = [
   "Buick",
   "Volvo",
@@ -16,7 +17,6 @@ const makes = [
   "Hyundai",
   "MINI",
   "Bentley",
-  "Mercedes-Benz",
   "Aston Martin",
   "Pontiac",
   "Lamborghini",
@@ -29,10 +29,30 @@ const makes = [
   "Land"
 ]
 
-
+// const customStyles = {
+//   control: (provided) => ({
+//     ...provided,
+//     borderRadius: '14px',
+//     alignItems: 'center',
+//     // padding: '14px 89px 14px 18px',
+//     justifyContent: 'center',
+//     background: '#F7F7FB',
+//     border: '1px solid #F7F7FB',
+//     width:'224px',
+//     height:'48px'
+//   }),
+//   option: (provided, state) => ({
+//     ...provided,
+//     color: state.isSelected ? 'white' : '#121417',
+//     fontSize: '18px',
+//     fontWeight: '500',
+//     lineHeight: '1.1111',
+//     backgroundColor: state.isSelected ? '#3470FF' : 'transparent',
+//   }),
+// };
 export const SearchBar = () =>{
 
-// Получаем ссылку на функцию отправки экшенов
+
   const dispatch = useDispatch();
   const [selectedMake, setSelectedMake] = useState('');
     
@@ -46,70 +66,88 @@ export const SearchBar = () =>{
   const handleMakeChange = (event) => {
      const newMake = event.target.value;
     setSelectedMake(newMake);
-    dispatch(setStatusFilter(newMake))
+    // dispatch(setStatusFilter(newMake))
   };
 
+  const handleSearchClick = () => {
+    dispatch(setMakeFilter(selectedMake));
+    dispatch(fetchFiltredCars());
+};
   return (
       
 
 <Wrapper>
 
-          <Label>
-                <Title>Car brand</Title>
-              <Select  value={selectedMake} onChange={handleMakeChange}>
-        <Option value="">Enter the text</Option>
-        {makes.map((make) => (
-          <option key={make} value={make}>
-            {make}
-          </option>
-        ))}
+        <div>
+        <Title>Car brand</Title>
         
-        <button type="button">
-       <svg width={16} height={16}>
-          <use href={`${sprite}#shevron-down`} />
-        </svg>
-      </button>
-      </Select >
-      
-    </Label>
+        {/* <Select
+          styles={customStyles}
+          options={[
+            { label: 'Enter the text', value: '' },
+            ...makes.map(make => ({ label: make, value: make }))
+          ]}
+          onChange={handleMakeChange}
+          isSearchable
+        /> */}
+        
+
+ 
+<SelectBrands value={selectedMake} onChange={handleMakeChange}>
+          <SelectedOption value="">Enter the text </SelectedOption>
+           
+        {makes.map((make) => (
+          <Option key={make} value={make}>
+            {make} 
+          </Option> 
+
+        ))}
+        {/* <Svg style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)' }} width={16} height={16}>
+          <use href={`${sprite}#chevron-down`} />
+        </Svg> */}
+        </SelectBrands > 
+        
+      </div>
+
+      <div>
+    <Title>price/1 hour</Title>
     
-    <Label>
- <Title>price/1 hour</Title>
-              <Select >
+   
+        <Select>
         <Option value="">To $</Option>     
-        <button type="button">
+        {/* <button type="button">
        <svg width={16} height={16}>
           <use href={`${sprite}#shevron-down`} />
         </svg>
-      </button>
-      </Select >
-      
-      </Label>
+      </button> */}
+      </Select>
+      </div>
+
       
 
       
-    <Label>
+    <div>
  <Title>Сar mileage / km</Title>
    <div>
-          <input
+          <InputLeft
             type="number"
             name="min"
             placeholder="From"
           //   value={mileageRange.min}
           //   onChange={handleMileageChange}
          />
-          <span>|</span>
-          <input
-            type="number"
+      
+          <InputRight
+            // type="number"
             name="max"
             placeholder="To"
             // value={mileageRange.max}
             // onChange={handleMileageChange}
           />
       </div>
-      </Label>
+      </div>
       
-<button>Search</button>
+<Button onClick={handleSearchClick}>Search</Button>
 
       </Wrapper>
 

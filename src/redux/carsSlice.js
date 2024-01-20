@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { fetchCars } from "./operations";
+import { fetchCars,fetchFiltredCars } from "./operations";
 import { handleLoadMoreAction } from  "./operations";
 
 const carsInitialState =
@@ -47,18 +47,26 @@ extraReducers: (builder) => {
         if (state.page === 1) {
          
           state.items = action.payload;
-          //  state.items = [...state.items, ...action.payload]
+      
         }
         else { state.items = [...state.items, ...action.payload];}
        
       })
+      .addCase(fetchFiltredCars.pending, handlePending)
+      .addCase(fetchFiltredCars.rejected, handleRejected)
+      .addCase(fetchFiltredCars.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = action.payload;
+      }) 
       
-  .addCase(handleLoadMoreAction, (state) => {
+      .addCase(handleLoadMoreAction, (state) => {
   state.page = state.page + 1;
 })
+  },
 
 },
-});
+);
 
 
 const persistConfig = {

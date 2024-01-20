@@ -3,16 +3,6 @@ import styled from 'styled-components';
 import { NavLink} from 'react-router-dom';
 
 
-export const Wrapper = styled.div`
-
-
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 0 auto;
-  padding: 0 15px;
-`;
-
 export const StyledLink = styled(NavLink)`
   color: black;
 
@@ -20,9 +10,7 @@ export const StyledLink = styled(NavLink)`
     color: orange;
   }
 `;
-export const Header = styled.header`
-  
-`;
+
 
 export const List = styled.ul`
   display: flex;

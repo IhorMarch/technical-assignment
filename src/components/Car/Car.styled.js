@@ -19,12 +19,14 @@ export const List = styled.ul`
 display:flex;
 flex-wrap: wrap;
 
-
 `;
+
 export const TitleBox = styled.div`
 display:flex;
 justify-content: space-between;
 `;
+
+
 export const Title = styled.li`
 color: #121417;
 font-size: 16px;
