@@ -14,7 +14,7 @@ const Favorites = () => {
 
   return (
   <>
-      <h2 style={{ margin: '50px 0' }}> Your favorist cars</h2>
+      <h2 style={{ margin: '50px 0' }}> Your favorits cars</h2>
       
   <CarList cars={cars}/>
      
