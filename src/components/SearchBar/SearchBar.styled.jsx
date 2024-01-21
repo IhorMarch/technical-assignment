@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 
-
-
-
 export const Label = styled.label`
   
 
@@ -26,9 +23,35 @@ display:flex;
 align-items: flex-end;
 justify-content: center;
 gap: 18px;
-margin-bottom:50px;
+
 margin-top:50px;
 `;
+
+export const WrapperSelect= styled.div`
+position:relative;
+/* &::before{
+
+  content:'';
+  position:absolute;
+  display:block;
+  right:18px;
+  top:14px;
+
+  width:20px;
+  height:20px;
+
+} */
+`;
+
+export const ArrowIcon = styled.svg`
+  position: absolute;
+  display: block;
+  right: 18px;
+  top: 14px;
+  width: 20px;
+  height: 20px;
+`;
+
 
 export const Select= styled.select`
 border-radius: 14px;
@@ -63,6 +86,14 @@ height:48px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  &.custom-select {
+    /* Сховати бордер при наведенні на <select> */
+    &:hover,
+    &:active {
+      border-color: transparent;
+    }
+      }
 `;
 
 export const Svg = styled.svg`
@@ -72,11 +103,11 @@ z-index: 1000;
 
 
 export const Option= styled.option`
-color: #121417;
-color: tomato;
-font-size: 18px;
+color: rgba(18, 20, 23, 0.20);
+
+font-size: 16px;
 font-weight: 500;
-line-height: 1.11111; /* 111.111% */
+line-height: 1.25; /* 125% */
  
 `;
 
@@ -105,6 +136,10 @@ background: #F7F7FB;
 
 width:160px;
 height:48px;
+color: #121417;
+font-size: 18px;
+font-weight: 500;
+line-height: 1.1111; /* 111.111% */
 `;
 
 
@@ -122,6 +157,12 @@ border: #F7F7FB;
 border-left: 1px solid rgba(138, 138, 137, 0.20);
 width:160px;
 height:48px;
+
+color: #121417;
+font-size: 18px;
+font-weight: 500;
+line-height: 1.1111; /* 111.111% */
+border-color: transparent;
 `;
 
 
@@ -138,5 +179,9 @@ background: #3470FF;
 width:136px;
 height:48px;
 color: white;
+font-size: 14px;
+font-weight: 600;
+line-height: 1.42857; /* 142.857% */
 `;
+
 

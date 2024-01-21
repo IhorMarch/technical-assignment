@@ -1,6 +1,6 @@
 import {  Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import {  List, StyledLink } from './AppBar.styled'
+import {  List, StyledLink,  } from './AppBar.styled'
 import { Loader } from '../Loader/Loader'
 
 
@@ -8,7 +8,7 @@ import { Loader } from '../Loader/Loader'
 export const AppBar = () => {
 
 return (
-     <header className='container'>
+     <header className='container' >
         <List>
           <li>
             <StyledLink to="/" >

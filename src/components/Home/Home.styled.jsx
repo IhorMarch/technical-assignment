@@ -12,6 +12,7 @@ background-color: ${variables.blackPrimary};
 height: 432px; */
 text-align: center;
 padding-top: 120px;
+margin-top:50px;
 padding-bottom: 120px;
 margin-left: auto;
 margin-right: auto;

@@ -7,7 +7,7 @@ export const StyledLink = styled(NavLink)`
   color: black;
 
   &.active {
-    color: orange;
+    color: #3470FF;;
   }
 `;
 
@@ -22,3 +22,5 @@ export const List = styled.ul`
   color: black;
   gap: 20px;
 `;
+
+

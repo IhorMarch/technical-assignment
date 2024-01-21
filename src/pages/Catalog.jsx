@@ -55,7 +55,8 @@ useEffect(() => {
   <>
     
   <SearchBar/>
-  <CarList cars={cars}/>
+      <CarList cars={cars} />
+
       {loadMoreDisabled &&  (
   <Button onClick={handleLoadMore}/>
      )}
