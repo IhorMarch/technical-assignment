@@ -1,9 +1,9 @@
-import {Option,Title,SelectBrands,Wrapper,Svg,Select,InputLeft,InputRight,Button,SelectedOption} from './SearchBar.styled'
+import {Option,Title,SelectBrands,Wrapper,Select,InputLeft,InputRight,Button,SelectedOption} from './SearchBar.styled'
 import { useDispatch } from "react-redux";
 import { setMakeFilter  } from "../../redux/filterSlice";
 import React, { useState } from 'react';
 import { fetchFiltredCars} from '../../redux/operations';
-import sprite from '../../images/symbol-defs.svg';
+// import sprite from '../../images/symbol-defs.svg';
 // import Select from 'react-select';
 const makes = [
   "Buick",
