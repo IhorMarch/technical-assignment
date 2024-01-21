@@ -11,6 +11,7 @@ export const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index:1000002;
   
 
 background: rgba(18, 20, 23, 0.50);
@@ -24,6 +25,7 @@ height: 752px;
 border-radius: 24px;
 background: #FFF;
 padding:40px;
+ z-index:1000001;
 `;
 
 

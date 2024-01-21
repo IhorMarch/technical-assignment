@@ -1,15 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+
 import { fetchCars,fetchFiltredCars } from "./operations";
 import { handleLoadMoreAction } from  "./operations";
 
 const carsInitialState =
 {
-  items: [
-  ],
-  favorites: [],
-
+  items: [],
     isLoading: false,
     error: null,
     page: 1,
@@ -36,15 +32,15 @@ const carsSlice = createSlice({
   reducers: {
     handleLoadMoreAction: (state) => {
       state.page = state.page + 1;
+    
     },
-    toggleFavorite: (state, action) => {
-      const car = action.payload;
-      const index = state.favorites.findIndex((favCar) => favCar.id === car.id);
-      if (index === -1) { state.favorites.push(car); }
-      else { state.favorites.splice(index, 1);}
+   
+
+    resetPage: (state) => {
+      state.page = 1;
     },
 
-    
+
      },
 extraReducers: (builder) => {
     builder
@@ -78,13 +74,8 @@ extraReducers: (builder) => {
 );
 
 
-const persistConfig = {
-  key: 'cars',
-  storage,
-}
 
 
-// Экспортируем генераторы экшенов и редюсер
-export const { handleLoadMore,toggleFavorite  } = carsSlice.actions;
+
+export const { handleLoadMore,resetPage} = carsSlice.actions;
 export const carsReducer = carsSlice.reducer;
-export const reducerCars = persistReducer(persistConfig, carsReducer)

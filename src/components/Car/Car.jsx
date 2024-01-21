@@ -15,7 +15,7 @@ import {
 } from '../Car/Car.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { CarModal } from '../Modal/Modal'
-import { toggleFavorite} from '../../redux/carsSlice'
+import { toggleFavorite} from '../../redux/favorites'
 import sprite from '../../images/symbol-defs.svg';
 import React, { useState} from "react";
 import { getFavorites} from '../../redux/selectors';
@@ -31,7 +31,7 @@ export const Car = ({ car }) => {
   const favorites = useSelector(getFavorites);
   
   const isFavorite = favorites.some(favCar => favCar.id === id);
-  console.log(isFavorite);
+
      const handleCarClick = () => {
     
     setModalActive(true);
