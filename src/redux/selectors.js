@@ -4,3 +4,4 @@ export const getError = state => state.adverts.error;
 export const getPage = state => state.adverts.page;
 export const getPerPage = state => state.adverts.perPage;
 export const getStatusFilter = state => state.filter;
+export const getFavorites = state => state.adverts.favorites;

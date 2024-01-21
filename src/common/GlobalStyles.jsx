@@ -95,7 +95,7 @@ html {
 	@media screen and (min-width: 1440px) {
 		[class="container"], [class$="main-container"] {
 			width: 1440px;
-			padding: 0 112px;
+			padding: 0 128px;
 		}
 			}
 

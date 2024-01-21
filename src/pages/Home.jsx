@@ -8,7 +8,7 @@ import Home from "../components/Home/Home";
 const HomePage = () => {
   return (
   
-      <div className="container">
+      <div >
         <Home/>
       </div>
     

@@ -8,8 +8,8 @@ import { NavLink} from 'react-router-dom';
 
 export const Section = styled.section`
 background-color: ${variables.blackPrimary};
-max-width: 428px;
-height: 432px;
+/* max-width: 428px;
+height: 432px; */
 text-align: center;
 padding-top: 120px;
 padding-bottom: 120px;
@@ -47,9 +47,9 @@ margin-right: auto;
 
 export const Wrapper = styled.div`
 margin: 0 auto;
-height:432px;
+/* height:432px;
     width: 100%;
-    max-width: 428px;
+    max-width: 428px; */
     padding-left: 16px;
     padding-right: 16px;
 

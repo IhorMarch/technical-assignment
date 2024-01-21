@@ -80,7 +80,7 @@ export const SearchBar = () =>{
 
         <div>
         <Title>Car brand</Title>
-        
+       
         {/* <Select
           styles={customStyles}
           options={[

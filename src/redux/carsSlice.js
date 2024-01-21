@@ -8,6 +8,7 @@ const carsInitialState =
 {
   items: [
   ],
+  favorites: [],
 
     isLoading: false,
     error: null,
@@ -36,6 +37,14 @@ const carsSlice = createSlice({
     handleLoadMoreAction: (state) => {
       state.page = state.page + 1;
     },
+    toggleFavorite: (state, action) => {
+      const car = action.payload;
+      const index = state.favorites.findIndex((favCar) => favCar.id === car.id);
+      if (index === -1) { state.favorites.push(car); }
+      else { state.favorites.splice(index, 1);}
+    },
+
+    
      },
 extraReducers: (builder) => {
     builder
@@ -76,7 +85,6 @@ const persistConfig = {
 
 
 // Экспортируем генераторы экшенов и редюсер
-export const { handleLoadMore } = carsSlice.actions;
+export const { handleLoadMore,toggleFavorite  } = carsSlice.actions;
 export const carsReducer = carsSlice.reducer;
-
 export const reducerCars = persistReducer(persistConfig, carsReducer)

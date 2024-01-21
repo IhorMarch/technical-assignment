@@ -9,23 +9,29 @@ import {
   Button,
   TitlePrice,
   List,
+  ButtonFav,
+  SvgWrapper
  
 } from '../Car/Car.styled';
-
+import { useDispatch, useSelector } from 'react-redux';
 import { CarModal } from '../Modal/Modal'
-
+import { toggleFavorite} from '../../redux/carsSlice'
+import sprite from '../../images/symbol-defs.svg';
 import React, { useState} from "react";
-
+import { getFavorites} from '../../redux/selectors';
 
 export const Car = ({ car }) => {
-  
+
   const { id, make, model, year, img, rentalPrice,address,rentalCompany,type,accessories } = car;
-const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700'
-
+  const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700'
   const cutedAddress = address ? address.split(/, |,|,/) : [];
+  const [modalActive, setModalActive] = useState(false);
 
-    const [modalActive, setModalActive] = useState(false);
-
+  const dispatch = useDispatch();
+  const favorites = useSelector(getFavorites);
+  
+  const isFavorite = favorites.some(favCar => favCar.id === id);
+  console.log(isFavorite);
      const handleCarClick = () => {
     
     setModalActive(true);
@@ -35,11 +41,25 @@ const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/i
     const handleModalClose = () => {
     setModalActive(false);
   };
-  //  const accessoriesContent = accessories[2].length > 20 ? accessories[2].slice(0, 25) + '...' : accessories[2];
+  
+const handleFavoriteClick = () => {
+  dispatch(toggleFavorite(car));
+  };
+
+
   return (
     
-           <div>
-                <ImgWrapper>
+    <div>
+      
+      <ImgWrapper>
+        <ButtonFav onClick={handleFavoriteClick} isfavorite={isFavorite}  >
+          <SvgWrapper isfavorite={isFavorite}>
+              <svg width={18} height={18} >
+                <use href={`${sprite}#${isFavorite ? 'active' : 'normal'}`} />
+          </svg>
+          </SvgWrapper>
+        </ButtonFav>
+        
         <Img  
                 src={img ? img : defaultImg}
                   
@@ -51,7 +71,8 @@ const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/i
         <TitleBox>
          
             <List>
-          <Title>{make}</Title>
+          <Title>{make}</Title>  
+            
           <TitleModel> {model},</TitleModel>
           <Title>{year}</Title>
             </List>

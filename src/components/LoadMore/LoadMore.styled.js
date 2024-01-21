@@ -10,4 +10,10 @@ font-style: normal;
 font-weight: 500;
 line-height: 1.5; /* 150% */
 text-decoration-line: underline;
+margin-top:100px;
+margin-left:auto;
+margin-right:auto;
+background: white;
+
+
 `;

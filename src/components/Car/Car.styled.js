@@ -3,7 +3,7 @@ import variables from 'common/Variables';
 
 
 export const ImgWrapper = styled.div`
-
+position:relative;
 `;
 
 
@@ -104,6 +104,32 @@ line-height: 1.42857; /* 142.857% */
 
 color: ${variables.whitePrimary};
 background-color: ${variables.bluePrimary};
+`;
+
+
+
+export const ButtonFav = styled.button`
+ display: flex;
+  position:absolute;
+  top: 14px;
+  right: 14px;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+background-color: transparent; 
+border-radius:50%;
+&:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+`;
+
+
+export const SvgWrapper = styled.span`
+  width: 18px;
+  height: 18px;
+  color: ${({ isfavorite }) => isfavorite ? 'red' : 'black'};
 `;
 
 
