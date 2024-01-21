@@ -110,15 +110,13 @@ export const SearchBar = () =>{
  <Title>Сar mileage / km</Title>
    <div>
           <InputLeft
-            type="number"
-            name="min"
+         
             placeholder="From"
        
          />
       
           <InputRight
    
-            name="max"
             placeholder="To"
        
           />

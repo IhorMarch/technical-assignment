@@ -67,6 +67,9 @@ font-weight: 500;
 line-height: 1.1111; /* 111.111% */
 width:160px;
 height:48px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 `;
 export const SelectBrands = styled.select`
 position:relative;
@@ -163,6 +166,8 @@ font-size: 18px;
 font-weight: 500;
 line-height: 1.1111; /* 111.111% */
 border-color: transparent;
+
+
 `;
 
 
