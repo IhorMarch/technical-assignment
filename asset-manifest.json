@@ -1,21 +1,26 @@
 {
   "files": {
     "main.css": "/technical-assignment/static/css/main.7acaea2f.css",
-    "main.js": "/technical-assignment/static/js/main.122db184.js",
-    "static/js/258.b988014d.chunk.js": "/technical-assignment/static/js/258.b988014d.chunk.js",
-    "static/js/49.d5729884.chunk.js": "/technical-assignment/static/js/49.d5729884.chunk.js",
+    "main.js": "/technical-assignment/static/js/main.c50f6574.js",
+    "static/js/258.c57f5d3b.chunk.js": "/technical-assignment/static/js/258.c57f5d3b.chunk.js",
+    "static/js/72.f87a9158.chunk.js": "/technical-assignment/static/js/72.f87a9158.chunk.js",
+    "static/js/395.dbd5a214.chunk.js": "/technical-assignment/static/js/395.dbd5a214.chunk.js",
+    "static/js/424.1b50d3d4.chunk.js": "/technical-assignment/static/js/424.1b50d3d4.chunk.js",
     "static/media/car2@2.jpg": "/technical-assignment/static/media/car2@2.41ce8c49be9ec86efa93.jpg",
     "static/media/car.jpg": "/technical-assignment/static/media/car.577ce392ca4fd851c491.jpg",
     "static/media/Manrope-Medium.ttf": "/technical-assignment/static/media/Manrope-Medium.08894ccb04665d1a9d53.ttf",
     "static/media/Manrope-Regular.ttf": "/technical-assignment/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
+    "static/media/symbol-defs.svg": "/technical-assignment/static/media/symbol-defs.693bb2afaf6b6c1b6ff79b8f38065207.svg",
     "index.html": "/technical-assignment/index.html",
     "main.7acaea2f.css.map": "/technical-assignment/static/css/main.7acaea2f.css.map",
-    "main.122db184.js.map": "/technical-assignment/static/js/main.122db184.js.map",
-    "258.b988014d.chunk.js.map": "/technical-assignment/static/js/258.b988014d.chunk.js.map",
-    "49.d5729884.chunk.js.map": "/technical-assignment/static/js/49.d5729884.chunk.js.map"
+    "main.c50f6574.js.map": "/technical-assignment/static/js/main.c50f6574.js.map",
+    "258.c57f5d3b.chunk.js.map": "/technical-assignment/static/js/258.c57f5d3b.chunk.js.map",
+    "72.f87a9158.chunk.js.map": "/technical-assignment/static/js/72.f87a9158.chunk.js.map",
+    "395.dbd5a214.chunk.js.map": "/technical-assignment/static/js/395.dbd5a214.chunk.js.map",
+    "424.1b50d3d4.chunk.js.map": "/technical-assignment/static/js/424.1b50d3d4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.122db184.js"
+    "static/js/main.c50f6574.js"
   ]
 }
